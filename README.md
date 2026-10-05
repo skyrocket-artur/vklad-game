@@ -1,2 +1,1 @@
-# vklad-game
-Игра-калькулятор «Налог на вклад» — Артур Юнусов
+Игра «Налог на вклад»: https://skyrocket-artur.github.io/vklad-game/
