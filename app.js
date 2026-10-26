@@ -4,6 +4,8 @@
   const CONFIG = {
     channelUrl: 'https://t.me/YunusovArtur',
     botUrl: 'https://t.me/YunusovArtur_bot?start=vklad',
+    nextUrl: 'https://t.me/YunusovArtur_bot?start=ipoteka',
+    skyUrl: 'https://t.me/YunusovArtur_bot?start=skyrocket_nalog',
     shareUrl: 'https://skyrocket-artur.github.io/vklad-game/',
     shareText: 'Посчитай, сколько налога придёт за проценты по вкладам. Игра-калькулятор за 3 минуты:'
   };
@@ -249,13 +251,18 @@
         <div><span>Тест на мифы</span><b>${S.score} из ${MYTHS.length}</b></div>
       </div></div>
       <div class="steps">${plan.map((p, i) => `<div><em>${i + 1}</em><span>${p}</span></div>`).join('')}</div>
-      <p>В Telegram-канале я каждый день разбираю рынок и пишу, куда двигаются ставки по вкладам и облигациям. Подпишись, чтобы не пропустить решение ЦБ 23 октября.</p>
+      <p>В Telegram-канале я каждый день разбираю рынок и пишу, куда двигаются ставки по вкладам и облигациям. Подпишись, чтобы не пропустить следующее решение ЦБ.</p>
+      <div class="card gold"><p><b>🎮 Следующий уровень (3 из 7) — игра «Ипотека без иллюзий»</b><br>Проживи 30 лет ипотеки за 15 минут: реальная переплата, скрытые платежи и что выгоднее — ипотека или аренда с инвестициями.</p></div>
       <div class="btns">
-        <button class="btn tg-btn" id="ch">Подписаться на канал</button>
-        <button class="btn" id="bot">Чек-лист «Выгоднее вклада?»</button>
+        <button class="btn" id="next">Играть в «Ипотеку без иллюзий» 🎮</button>
+        <button class="btn tg-btn" id="sky">Узнать про закрытый канал 🔒</button>
+        <button class="btn ghost" id="ch">Подписаться на канал</button>
+        <button class="btn ghost" id="bot">Чек-лист «Выгоднее вклада?»</button>
         <button class="btn ghost" id="share">Отправить другу, у кого вклады</button>
         <button class="btn ghost" id="again">Пересчитать</button>
       </div>`, 6);
+    document.getElementById('next').onclick = () => openUrl(CONFIG.nextUrl);
+    document.getElementById('sky').onclick = () => openUrl(CONFIG.skyUrl);
     document.getElementById('ch').onclick = () => openUrl(CONFIG.channelUrl);
     document.getElementById('bot').onclick = () => openUrl(CONFIG.botUrl);
     document.getElementById('share').onclick = () => {
